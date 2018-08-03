@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Web Gallery</title>
+    <link href="style/main.css" rel="stylesheet" type="text/css" />
+    <link href="style/form.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div class="nav">
+        <ul class="navbar" id="topnavbar">
+            <div class="main_nav">
+                <li id="active"><a href="/">Main</a></li>
+                <li type="button" id="signup"><a href="/signup.html">Sign Up</a><li>
+            </div>
+        </ul>
+    </div>
+
+    <header>
+        <h1>Sign In Web Gallery</h1>
+    </header>
+
+    <div class="container" id="error">
+    </div>
+
+    <form class="signin_form complex_form" id="signin_form">
+        <div class="form_title">Sign In</div>
+
+        <div class="input_text" id="signup_info">
+            <div>
+                <input type="text" id="signin_username" class="form_element" placeholder="Username" />
+                <input type="password" id="signin_pass" class="form_element" placeholder="Password" />
+            </div>
+            <button type="button" class="btn" id="submit_signin" name="button">Sign In</button>
+        </div>
+
+    </form>
+
+
+
+    <footer class="nav">
+        <ul class="navbar">
+            <li><a class="bottom" href='./credits.html'>credits</a></li>
+        </ul>
+    </footer>
+    <script src="js/model.js"></script>
+    <script src="js/signin.js"></script>
+</body>
+
+</html>

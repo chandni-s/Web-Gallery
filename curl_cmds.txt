@@ -1,0 +1,19 @@
+curl -k -X PUT -H "Content-Type: application/json" -d '{"username":"alice","password":"1"}' --cookie-jar ./cookieFile https://localhost:3000/signup/
+
+curl -k -X POST -H "Content-Type: application/json" -d '{"username":"alice","password":"1"}' --cookie-jar ./cookieFile https://localhost:3000/signin/
+
+curl -k -X POST -H "Content-Type: application/json" -d '{"title":"<h1>Picture</h1>","author":"chani", "url":"http://r.ddmcdn.com/s_f/o_1/cx_633/cy_0/cw_1725/ch_1725/w_720/APL/uploads/2014/11/too-cute-doggone-it-video-playlist.jpg"}' --cookie ./cookieFile https://localhost:3000/users/
+
+curl -k -X POST -H "Content-Type: application/json" -d '{"authorName":"a","comment":"a"}' --cookie ./cookieFile https://localhost:3000/users/alice/5wLh8fEL6uaYBnYB/comments/
+
+curl -k -X GET --cookie ./cookieFile https://localhost:3000/users/
+
+curl -k -X GET --cookie ./cookieFile https://localhost:3000/signout/
+
+curl -k -X GET --cookie ./cookieFile https://localhost:3000/users/alice/images/
+
+curl -k -X GET --cookie ./cookieFile https://localhost:3000/users/alice/images/5wLh8fEL6uaYBnYB/comments/
+
+curl -k -X GET --cookie ./cookieFile https://localhost:3000/users/alice/images/5wLh8fEL6uaYBnYB/comments/Nwo81qW6rVmyXJjX/
+
+curl -k -X DELETE --cookie ./cookieFile https://localhost:3000/users/alice/images/Av3RAuHALgpDqEQI/

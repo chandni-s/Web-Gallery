@@ -1,0 +1,78 @@
+.complex_form{
+    margin-top:5%;
+    margin-bottom: 5%;
+    border-radius: 10px;
+    border: 2px #3C3D3F solid;
+    padding:20px;
+    display:none;
+    flex-direction: column;
+    text-align: center;
+}
+
+.complex_form .input_text {
+  margin: 30px;
+}
+
+#comment_form_img {
+  display: inline-flex;
+  justify-content: center;
+}
+
+.complex_form .form_title{
+    font-size:20px;
+    margin:-20px -20px 20px -20px;
+    padding:10px 0px 10px 25px;
+    color:#ffffff;
+    background-color: #00BC90;
+    border-radius: 7px 7px 0px 0px;
+}
+
+.complex_form .form_radio{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.complex_form .form_element{
+     margin-bottom:20px;
+     margin-right: 10px;
+     font-size: 18px;
+     border-radius:10px;
+     padding:5px 10px 5px 10px;
+}
+
+.signup_form, .comment_form, .signin_form {
+  max-width: 800px;
+  margin: 7% auto 7% auto;
+}
+
+/* This snippet of code was generated using: http://css3buttongenerator.com/ */
+
+#postmsg {
+  height: 150px;
+}
+
+.radio-buttons {
+  padding-bottom: 20px;
+}
+
+.radio-buttons label {
+  font-size: 18px;
+  padding: 4px 11px;
+}
+
+#upload_options {
+  display: none;
+}
+
+/*input[type="file"] {
+    display: none;
+}*/
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-right: 20px;
+    font-size: 15px;
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Web Gallery</title>
+    <link href="style/main.css" rel="stylesheet" type="text/css" />
+    <link href="style/form.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link href="style/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+      <div class="navv">
+          <ul class="row navvbar" id="topnavbar">
+              <div class="row main_nav">
+                  <li class="col-3" id="active"><a href="/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+                  <div class="col-9" id="userdiv"></div>
+              </div>
+
+
+          </ul>
+      </div>
+
+    <div class="container">
+      <header>
+          <h1>The Web Gallery</h1>
+          <div class="row justify-content-around signupin">
+            <button type="button" class="btn btn-primary btn-lg col-sm-4" id="signup">Sign Up</button>
+            <button type="button" class="btn btn-primary btn-lg col-sm-4" id="signin">Sign In</button>
+          </div>
+      </header>
+
+
+
+      <div id="error"></div>
+
+      <div class="upload_container">
+          <!-- Image upload form -->
+
+          <div class="row justify-content-between">
+            <div id="paginatedusers" class="col-4"></div>
+
+            <!--<input type="button" value="Upload" class="btn btn-secondary btn-lg hide" id="upload_button" />-->
+            <div class="col-4" style="display: inline-flex;">
+              <button type="button" class="btn btn-primary hide" id="upload_button">Upload</button>
+              <button type="button" class="btn btn-primary hide" id="signout">Signout</button>
+            </div>
+          </div>
+
+          <form class="complex_form" id="picture_form">
+              <div class="form_title">Upload the picture</div>
+
+              <div class="input_text">
+                  <input type="text" id="image_title" class="form_element" placeholder="Enter image title" />
+                  <input type="text" id="image_author" class="form_element" placeholder="Enter image author" />
+              </div>
+
+              <div class="form_title">Choose the method</div>
+              <div class="radio-buttons">
+                  <input type="radio" id="url" name="url_file">
+                  <label for="url">URL</label>
+
+                  <input type="radio" id="fileupload" name="url_file">
+                  <label for="fileupload">File Upload</label>
+              </div>
+
+              <div id="upload_options">
+                  <input type="text" id="url_form_name" class="form_element" placeholder="Enter the image url" />
+
+                  <div class="choose-file" id="choose_file">
+                      <input id="file-upload" type="file" />
+                  </div>
+              </div>
+
+              <button type="button" class="btnn" id="submit_form" name="button">Submit</button>
+          </form>
+      </div>
+
+
+
+      <!-- Image Display -->
+      <div class="display-block hide" id="slider">
+
+          <div id="main_img" class="upload_container"></div>
+
+          <div class="image_nav" id="img_nav">
+              <div id="previous_img" class="arrows">&#10094;</div>
+              <div id="comment_img" class="btnn">Comment</div>
+              <div id="deleteimg_button" class="header_button"></div>
+              <div id="next_img" class="arrows">&#10095;</div>
+          </div>
+
+          <form class="comment_form complex_form" id="comment_form">
+              <div class="form_title">Write your comment</div>
+
+              <div class="input_text" id="comment_form_img">
+                  <div>
+                      <input type="text" id="img_author_name" class="form_element" placeholder="Enter your name" />
+                  </div>
+                  <div>
+                      <textarea type="text" id="img_comment_text" class="form_element" placeholder="Enter comments" rows="2"></textarea>
+                  </div>
+                  <button type="button" class="btnn" id="submit_comment" name="button">Submit</button>
+              </div>
+
+          </form>
+
+          <!-- Image comment -->
+
+      </div>
+
+      <form class="signup_form complex_form" id="signup_form">
+          <div class="form_title">Sign Up</div>
+
+          <div class="input_text" id="signup_info">
+              <div>
+                  <input type="text" id="signup_username" class="form_element" placeholder="Username" />
+                  <input type="password" id="signup_pass" class="form_element" placeholder="Password" />
+              </div>
+              <button type="button" class="btn btn-outline-primary btn-lg col-sm-3" id="submit_signup" name="button">Sign Up</button>
+          </div>
+
+
+
+      </form>
+
+      <form class="signin_form complex_form" id="signin_form">
+          <div class="form_title">Sign In</div>
+
+          <div class="input_text" id="signup_info">
+              <div>
+                  <input type="text" id="signin_username" class="form_element" placeholder="Username" />
+                  <input type="password" id="signin_pass" class="form_element" placeholder="Password" />
+              </div>
+              <button type="button" class="btn btn-outline-primary btn-lg col-sm-3" id="submit_signin" name="button">Sign In</button>
+          </div>
+
+      </form>
+    </div>
+
+
+    <footer class="navv footernav">
+      <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-6 offset-md-3 faveicons">
+              <a href="#">&copy; 2017 | </a>
+              <a href="https://github.com/UTSCC09/sehgalc1/tree/master/assignment/3" target="_blank"><i class="fa fa-github"></i></a>
+              <a href="https://linkedin.com/in/chandnisehgal" target="_blank"><i class="fa fa-linkedin"></i></a>
+              <a href="mailto:c.sehgal12@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+              <a href="https://twitter.com/Chandni__S" target="_blank"><i class="fa fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+    </footer>
+    <script src="js/model.js"></script>
+    <script src="js/view.js"></script>
+    <script src="js/controller.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Web Gallery</title>
+    <link href="style/main.css" rel="stylesheet" type="text/css" />
+    <link href="style/form.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div class="nav">
+        <ul class="navbar" id="topnavbar">
+            <div class="main_nav">
+                <li id="active"><a href="/">Main</a></li>
+                <li type="button" id="signin"><a href="/signin.html">Sign In</a><li>
+            </div>
+        </ul>
+    </div>
+
+    <header>
+        <h1>Sign Up Web Gallery</h1>
+    </header>
+
+    <div class="container" id="error">
+    </div>
+
+    <div><h3 id="username"></h3></div>
+
+    <form class="signup_form complex_form" id="signup_form">
+        <div class="form_title">Sign Up</div>
+
+        <div class="input_text" id="signup_info">
+            <div>
+                <input type="text" id="signup_username" class="form_element" placeholder="Username" />
+                <input type="password" id="signup_pass" class="form_element" placeholder="Password" />
+            </div>
+            <button type="button" class="btn" id="submit_signup" name="button">Sign Up</button>
+        </div>
+
+    </form>
+
+
+
+    <footer class="nav">
+        <ul class="navbar">
+            <li><a class="bottom" href='./credits.html'>credits</a></li>
+        </ul>
+    </footer>
+    <script src="js/model.js"></script>
+    <script src="js/signup.js"></script>
+</body>
+
+</html>
